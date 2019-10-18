@@ -43,5 +43,36 @@ class BarangController {
     });
   }
 
+  Create(res,data) {
+    models.Barang.create(data).then(() => {
+      res.json({msg:'success inserting !'});
+    }).catch((err) => {
+      res.json({msg:err});
+    });
+  }
+
+  async Edit(req,res){
+    const id = req.params.id;
+    res.json({data:await models.Barang.findByPk(id)})
+  }
+
+ Update(req,res,id,data){
+    models.Barang.findByPk(id).then((bar) => {
+      bar.update(data);
+      return res.json({msg:'success updated'});
+    }).catch((err) => {
+      res.json({msg:err.message});
+    });
+  }
+  
+ Destroy(req,res,id){
+    models.Barang.findByPk(id).then((row) => {
+      row.destroy();
+      return res.json({message: 'success deleted'});
+    }).catch((err) => {
+      res.json({message: err.message});
+    });
+  }
+
 }
 module.exports = BarangController
