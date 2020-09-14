@@ -16,10 +16,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "dngctkirvrhaqy",
-    "password": "0f05eae276cd34dcda2d6e7aee0f5ca99baa3e4029c29c4d90190e9a06f9cde0",
-    "database": "d9cfm03ik2o0f",
-    "host": "ec2-23-21-186-85.compute-1.amazonaws.com",
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
     "dialect": "postgres",
     "logging": true,
     "port":5432,
